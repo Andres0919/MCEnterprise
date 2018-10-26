@@ -26,7 +26,7 @@
   </q-page>
 </template>
 <script>
-import axios from 'axios'
+import axios from 'axios';
 export default {
   name: 'PageIndex',
   data: () => ({
@@ -65,23 +65,29 @@ export default {
   }),
   methods: {
     getAllCountries() {
-      axios.get(this.apiAllUrl).then(response => {
-        this.countries = response.data
-      }).catch(error => {
-        console.log(error)
-      })
+      axios
+        .get(this.apiAllUrl)
+        .then(response => {
+          this.countries = response.data;
+        })
+        .catch(error => {
+          console.log(error);
+        });
     },
-    showModal (name) {
-      axios.get(this.apiNameUrl + name).then(response => {
-        this.country = response.data[0]
-      }).catch(error => {
-        console.log(error)
-      })
-      this.basicModal = true
+    showModal(name) {
+      axios
+        .get(this.apiNameUrl + name)
+        .then(response => {
+          this.country = response.data[0];
+        })
+        .catch(error => {
+          console.log(error);
+        });
+      this.basicModal = true;
     }
   },
-  mounted: function(){
-    this.getAllCountries()
+  mounted: function() {
+    this.getAllCountries();
   }
-}
+};
 </script>

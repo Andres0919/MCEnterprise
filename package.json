@@ -8,7 +8,8 @@
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.vue src",
-    "test": "echo \"No test specified\" && exit 0"
+    "test": "echo \"No test specified\" && exit 0",
+    "prettier": "prettier --write --single-quote --print-width 120 '*.js' 'src/**/*.js' 'src/**/*.vue' "
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -25,6 +26,7 @@
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-standard": "^3.0.1",
     "eslint-plugin-vue": "^4.3.0",
+    "prettier": "^1.14.3",
     "quasar-cli": "^0.16.0"
   },
   "engines": {
